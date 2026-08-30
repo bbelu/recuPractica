@@ -15,7 +15,7 @@ body {
   color: #333;
   background-color: #ffffff;
   line-height: 1.5;
-  background-image: url("img/fondo.png");
+  background-image: url("../img/fondo.png");
 
 }
 
@@ -36,7 +36,7 @@ nav ul {
   list-style: none;       /* quitamos los bullets */
   display: flex;          /* menú horizontal con flexbox */
   justify-content: center;
-  background-color: #34495e;
+  background-color: #34495e; 
 }
 
 nav li {
@@ -82,6 +82,10 @@ main {
   display: flex;
 }
 
+#columnas section{
+  width: 33.33%;
+}
+
 main section {
   margin-bottom: 2rem;
 }
@@ -99,6 +103,30 @@ main ul {
   margin-left: 1.5rem;
 }
 
+#contenido{
+ background-image: linear-gradient(to top, rgb(185, 189, 190), rgb(254, 254, 254));
+width: 95%;
+padding: 1em;
+ margin: 0 auto;
+ border-top: 0;
+}
+img{
+        display: block;
+        margin: auto;
+        width: 75%;
+     
+    }
+
+
+#datosc{
+  
+  text-align: center;
+  padding: 1rem;
+ 
+}
+#datosc ul{
+  list-style: none;
+}
 /* ===========================
    Pie de página (footer)
    =========================== */
