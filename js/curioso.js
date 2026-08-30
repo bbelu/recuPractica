@@ -18,5 +18,14 @@ let datoCurioso = [
 "Explora el arte generativo como un proceso basado en reglas simples que producen resultados complejos y emergentes.",
 
 "Además de visuales digitales, ha realizado impresiones generativas de gran formato como obras únicas o en series.",
-]
+];
 
+
+
+let parrafo = document.querySelector("#datoCurioso");  
+let boton = document.querySelector("#btnCurioso");     
+
+boton.addEventListener('click', function(){             
+    let indice = Math.floor(Math.random() * datoCurioso.length);  
+    parrafo.innerHTML = datoCurioso[indice];             
+});
