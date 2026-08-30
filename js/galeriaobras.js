@@ -6,7 +6,34 @@ let obras = [
   {titulo: "Process 12", anio: "2006", imagen: "img/process12.jpg"}
 ];
 
-let obrasDetalle = document.querySelector("#obras")
-let botonSiguiente = document.querySelector("#btnSiguiente");  
-let botonAnterior = document.querySelector ("btnAnterior");
-let indiceObras = 0
+let imagenObra = document.querySelector("#imgObra");
+let tituloObra = document.querySelector("#nombreObra");
+let anioObra = document.querySelector("#fechaObra");
+let botonSiguiente = document.querySelector("#btnSiguiente");
+let botonAnterior = document.querySelector("#btnAnterior");
+let indiceObras = 0;
+
+function mostrarObra() {
+  imagenObra.src = obras[indiceObras].imagen;      // pista: accedé a la propiedad "imagen" del objeto en la posición indiceObras
+  tituloObra.innerText = obras[indiceObras].titulo;  // pista: propiedad "titulo"
+  anioObra.innerText = obras[indiceObras].anio;   // pista: propiedad "anio"
+}
+
+botonSiguiente.addEventListener('click', function(){
+  indiceObras++;
+  
+  if (indiceObras === obras.length) {
+    indiceObras = 0;   // ¿a qué valor tiene que volver si se pasó del final?
+  }
+  
+  mostrarObra();
+});
+
+
+botonAnterior.addEventListener('click', function(){
+  indiceObras--;
+  if (indiceObras === obras.length) {
+    indiceObras = obras.length--
+  }
+  mostrarObra();
+});
