@@ -14,16 +14,16 @@ let botonAnterior = document.querySelector("#btnAnterior");
 let indiceObras = 0;
 
 function mostrarObra() {
-  imagenObra.src = obras[indiceObras].imagen;      // pista: accedé a la propiedad "imagen" del objeto en la posición indiceObras
-  tituloObra.innerText = obras[indiceObras].titulo;  // pista: propiedad "titulo"
-  anioObra.innerText = obras[indiceObras].anio;   // pista: propiedad "anio"
+  imagenObra.src = obras[indiceObras].imagen;      
+  tituloObra.innerText = obras[indiceObras].titulo;  
+  anioObra.innerText = obras[indiceObras].anio;   
 }
 
 botonSiguiente.addEventListener('click', function(){
   indiceObras++;
   
   if (indiceObras === obras.length) {
-    indiceObras = 0;   // ¿a qué valor tiene que volver si se pasó del final?
+    indiceObras = 0;   
   }
   
   mostrarObra();
@@ -32,8 +32,10 @@ botonSiguiente.addEventListener('click', function(){
 
 botonAnterior.addEventListener('click', function(){
   indiceObras--;
-  if (indiceObras === obras.length) {
-    indiceObras = obras.length--
+  if (indiceObras === -1) {
+    indiceObras = obras.length - 1;
   }
   mostrarObra();
 });
+
+mostrarObra(); // recomendo IA, para que no quede vacio al cagar la pagina por primera vez
