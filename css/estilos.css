@@ -84,6 +84,18 @@ main {
 
 #columnas section{
   width: 33.33%;
+  padding: 1em;
+}
+
+
+#columnasgaleria{
+    display: flex;
+}
+
+
+#columnasgaleria section{
+width: 50%;
+padding: 1em;
 }
 
 main section {
@@ -118,7 +130,7 @@ img{
     }
 
 
-#datosc{
+#datosc, #galeriaObras{
   
   text-align: center;
   padding: 1rem;
