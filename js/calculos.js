@@ -60,3 +60,36 @@ btnIniciar.addEventListener('click', function(){
     habilitarDeshabilitar(btnIniciar, true);   // lo deshabilita
     habilitarDeshabilitar(btnAgregarInstalacion, false); // lo habilita
 });
+
+
+btnAgregarInstalacion.addEventListener('click', function(){
+  
+  let nombreIngresado = inputNombreInst.value;
+  let personasIngresadas = Number(inputCantPersonas.value);
+  let diasIngresados = Number(inputCantDias.value);
+
+
+   if (nombreIngresado.length < 3 || nombreIngresado.length > 50) {
+    alert("El nombre debe tener entre 3 y 50 caracteres.");
+    return;
+  }
+
+  if (isNaN(personasIngresadas) || personasIngresadas <= 0) {
+    alert("Por favor, ingrese una cantidad de personas válida.");
+    return;
+  }
+
+  if (isNaN(diasIngresados) || diasIngresados <= 0) {
+    alert("Por favor, ingrese una cantidad de días válida.");
+    return;
+  }
+
+    let nuevaInstalacion = {
+    nombre: nombreIngresado,
+    personas: personasIngresadas,
+    dias: diasIngresados
+  };
+
+  instalaciones.push(nuevaInstalacion);
+
+})
