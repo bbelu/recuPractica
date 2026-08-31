@@ -131,4 +131,9 @@ for (let i = 0; i < instalaciones.length; i++) {
   costoTotalEstudio = costoTotalEstudio + costoDeEstaInstalacion;
 }
 let porcentaje = (costoInstalacionMax / costoTotalEstudio) * 100;
+
+resulCostDia.innerText = "El costo de un día de trabajo es $" + costoDia;
+maxDiaCost.innerText = "La instalación con más días es " + instalacionMax.nombre + " con un costo total de $" + costoInstalacionMax
+porcentCosto.innerText = porcentaje + "%" ;
+
 });
