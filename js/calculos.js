@@ -123,5 +123,12 @@ btnCalcular.addEventListener('click', function(){
     instalacionMax = instalaciones[i];
   }
 }
+let costoInstalacionMax = horasPorDia * honorarioPorHora * instalacionMax.personas * instalacionMax.dias;
+let costoTotalEstudio = 0;
 
+for (let i = 0; i < instalaciones.length; i++) {
+  let costoDeEstaInstalacion = horasPorDia * honorarioPorHora * instalaciones[i].personas * instalaciones[i].dias;
+  costoTotalEstudio = costoTotalEstudio + costoDeEstaInstalacion;
+}
+let porcentaje = (costoInstalacionMax / costoTotalEstudio) * 100;
 });
