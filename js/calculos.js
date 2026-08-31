@@ -105,5 +105,17 @@ btnAgregarInstalacion.addEventListener('click', function(){
 }
   
 
-})
+});
 
+
+btnCalcular.addEventListener('click', function(){
+  
+  let totalPersonas = 0;
+  for (let i = 0; i < instalaciones.length; i++) {
+    totalPersonas = totalPersonas + instalaciones[i].personas;
+  }
+  let costoDia = horasPorDia * honorarioPorHora * totalPersonas;
+
+
+
+});
