@@ -25,9 +25,39 @@
   </nav>
   <main>
     <div id="contenido">
-    <section>
-      <h2>Proyectos e Instalaciones Interactiva.</h2>
+    
+    <section id="formInicial">
+      <h2>Datos generales de producción</h2>
+  
+      <label for="cantidad">Cantidad de instalaciones a producir:</label>
+      <input type="number" id="cantidad" name="cantidad">
+
+      <label for="horasPordia">Horas de trabajo por día (por persona):</label>
+      <input type="number" id="horasPordia" name="horasPordia">
+
+      <label for="honorarioHora">Valor del honorario por hora ($):</label>
+      <input type="number" id="honorarioHora" name="honorarioHora">
+  
+  
+      <button type="button" id="btnIniciar">Comenzar carga de instalaciones</button>
     </section>
+
+    <section id="formInstalacion">
+      <h2>Cargar instalación</h2>
+    
+      <label for="nombreInst">Nombre de la instalación:</label>
+      <input type="text" id="nombreInst" name="nombreInst">
+    
+      <label for="cantPersonas">Cantidad de personas necesarias:</label>
+      <input type="number" id="cantPersonas" name="cantPersonas">
+
+      <label for="cantDias">Dias de produccion:</label>
+      <input type="number" id="cantDias" name="cantDias">
+    
+      <button type="button" id="btnAgregarInstalacion">Agregar instalación</button>
+    </section>
+
+      
   </div>
   </main>
 
