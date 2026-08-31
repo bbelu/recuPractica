@@ -120,7 +120,7 @@ btnCalcular.addEventListener('click', function(){
 
     for (let i = 1; i < instalaciones.length; i++) {
   if (instalaciones[i].dias > instalacionMax.dias) {
-    instalacionMax = maxDiaCost;
+    instalacionMax = instalaciones[i];
   }
 }
 
