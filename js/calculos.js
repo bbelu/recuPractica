@@ -137,3 +137,36 @@ maxDiaCost.innerText = "La instalación con más días es " + instalacionMax.nom
 porcentCosto.innerText = porcentaje + "%" ;
 
 });
+btnReiniciar.addEventListener('click', function(){
+
+  // 1. Vaciar el array
+  instalaciones = [];
+
+  // 2. Limpiar los inputs
+  inputCantidad.value = "";
+  inputHoras.value = "";
+  inputHonorario.value = "";
+  inputNombreInst.value = "";
+  inputCantPersonas.value = "";
+  inputCantDias.value = "";
+
+  // 3. Limpiar los resultados mostrados
+  resulCostDia.innerText = "";
+  maxDiaCost.innerText = "";
+  porcentCosto.innerText = "";
+
+  // 4. Volver al estado inicial de habilitado/deshabilitado
+  habilitarDeshabilitar(inputCantidad, false);
+  habilitarDeshabilitar(inputHoras, false);
+  habilitarDeshabilitar(inputHonorario, false);
+  habilitarDeshabilitar(btnIniciar, false);
+
+  habilitarDeshabilitar(inputNombreInst, true);
+  habilitarDeshabilitar(inputCantPersonas, true);
+  habilitarDeshabilitar(inputCantDias, true);
+  habilitarDeshabilitar(btnAgregarInstalacion, true);
+
+  habilitarDeshabilitar(btnCalcular, true);
+  habilitarDeshabilitar(btnReiniciar, true);
+
+});
