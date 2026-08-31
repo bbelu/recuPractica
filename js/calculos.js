@@ -21,6 +21,11 @@ let horasPorDia;                // se asigna en btnIniciar
 let honorarioPorHora;           // se asigna en btnIniciar
 let cantidadInstalaciones;      // se asigna en btnIniciar
 
+function habilitarDeshabilitar(elemento, estado) {
+  elemento.disabled = estado;
+}
+
+
 
 btnIniciar.addEventListener('click', function(){
   let cantidadIngresada = Number(inputCantidad.value);
@@ -45,4 +50,13 @@ btnIniciar.addEventListener('click', function(){
   cantidadInstalaciones = cantidadIngresada;
   horasPorDia = horasIngresadas;
   honorarioPorHora = honorarioIngresado;
-});
+}
+habilitarDeshabilitar(inputCantidad, true);   // lo deshabilita
+habilitarDeshabilitar(inputNombreInst, false); // lo habilita
+habilitarDeshabilitar(inputHoras, true);   // lo deshabilita
+habilitarDeshabilitar(inputCantPersonas, false); // lo habilita
+habilitarDeshabilitar(inputHonorario, true);   // lo deshabilita
+habilitarDeshabilitar(inputCantDias, false); // lo habilita
+habilitarDeshabilitar(btnIniciar, true);   // lo deshabilita
+habilitarDeshabilitar(btnAgregarInstalacion, false); // lo habilita
+);
