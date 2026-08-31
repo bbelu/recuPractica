@@ -90,6 +90,20 @@ btnAgregarInstalacion.addEventListener('click', function(){
     dias: diasIngresados
   };
 
-  instalaciones.push(nuevaInstalacion);
+    instalaciones.push(nuevaInstalacion);
+    inputNombreInst.value = "";
+    inputCantPersonas.value = "";
+    inputCantDias.value = "";
+
+    if (instalaciones.length === cantidadInstalaciones) {
+    habilitarDeshabilitar(inputNombreInst, true);
+    habilitarDeshabilitar(inputCantPersonas, true);
+    habilitarDeshabilitar(inputCantDias, true);
+    habilitarDeshabilitar(btnAgregarInstalacion, true);
+    habilitarDeshabilitar(btnCalcular, false);
+    habilitarDeshabilitar(btnReiniciar, false);
+}
+  
 
 })
+
