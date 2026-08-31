@@ -21,3 +21,28 @@ let horasPorDia;                // se asigna en btnIniciar
 let honorarioPorHora;           // se asigna en btnIniciar
 let cantidadInstalaciones;      // se asigna en btnIniciar
 
+
+btnIniciar.addEventListener('click', function(){
+  let cantidadIngresada = Number(inputCantidad.value);
+  let horasIngresadas = Number(inputHoras.value);
+  let honorarioIngresado = Number(inputHonorario.value);
+
+  if (isNaN(cantidadIngresada) || cantidadIngresada <= 0) {
+    alert("Porfavor, ingrese datos validos.");
+    return;
+  }
+
+  if (isNaN(horasIngresadas) || horasIngresadas <= 0) {
+    alert("Porfavor, ingrese datos validos.");
+    return;
+  }
+
+   if (isNaN(honorarioIngresado) || honorarioIngresado <= 0) {
+    alert("Porfavor, ingrese datos validos.");
+    return;
+  }
+
+  cantidadInstalaciones = cantidadIngresada;
+  horasPorDia = horasIngresadas;
+  honorarioPorHora = honorarioIngresado;
+});
