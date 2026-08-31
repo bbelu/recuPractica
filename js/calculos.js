@@ -116,6 +116,12 @@ btnCalcular.addEventListener('click', function(){
   }
   let costoDia = horasPorDia * honorarioPorHora * totalPersonas;
 
+  let instalacionMax = instalaciones[0]; 
 
+    for (let i = 1; i < instalaciones.length; i++) {
+  if (instalaciones[i].dias > instalacionMax.dias) {
+    instalacionMax = maxDiaCost;
+  }
+}
 
 });
